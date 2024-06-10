@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Search</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="head">Search Authors, Titles, Courses, Projects or Languages</h1>
+    <div class="group">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button id="searchButton">Search/Apply Filters</button>
+    </div>
+    <div class="filters">
+        <h2>Filters</h2>
+        <div>
+            <label for="languageSelect">Language:</label>
+            <select id="languageSelect">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div>
+            <label for="typeSelect">Type:</label>
+            <select id="typeSelect">
+                <option value="">All</option>
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+            </select>
+        </div>
+        <div>
+            <label for="categorySelect">Category:</label>
+            <select id="categorySelect">
+                <option value="">All</option>
+            </select>
+        </div>
+    </div>
+    <ul id="resultsList"></ul>
+    <div class="itemsList" id="itemsList">
+    </div>
+    <script src="show.js"></script>
+    <script src="languages.js" type="module"></script>
+    <script src="categories.js" type="module"></script>
+    <script src="items.js" type="module"></script>
+    <script src="search.js" type="module"></script>
+</body>
+</html>

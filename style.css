@@ -1,0 +1,96 @@
+body{
+  margin:0;
+  scroll-behavior:smooth;
+}
+
+.head{
+  font-size:28px;
+  text-align:center;
+}
+
+.group{
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput{
+  height: 40px;
+  border-radius: 10px;
+  padding-right: 60px;
+  margin-right: 10px;
+  border: 2px solid black;
+}
+
+#searchButton{
+  border-radius: 10px;
+  background-color: darkblue;
+}
+
+#searchButton:is(:hover,:focus){
+  outline-offset: 3px;
+  background-color: deepskyblue;
+}
+
+.filters{
+  display: flex-box;
+  text-align: center;
+}
+
+#resultsList{
+  border: 1px solid black;
+  padding: 10px;
+  overflow-y: auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 300px;
+}
+
+/* Style for the list items */
+#resultsList li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Style for the images */
+#resultsList img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100px;
+}
+
+#resultsList h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+#resultsList p {
+    margin: 0 0 5px;
+    color: #666;
+}
+
+#resultsList .author {
+    font-style: italic;
+    color: #999;
+}
+
+.learn-more {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#resultsList a.learn-more:hover {
+    background-color: #0056b3;
+}
