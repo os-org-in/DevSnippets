@@ -1,0 +1,50 @@
+.h1{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 70px;
+}
+
+.locator{
+  margin-left: 10px;
+  color: #626582;
+}
+
+.line{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#overview{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.p{
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 15px;
+}
+
+#libraries{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#features{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#audience{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
