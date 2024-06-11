@@ -9,6 +9,75 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const searchBox = document.getElementById('search-box');
+const results = document.getElementById('results');
+
+searchBox.addEventListener('keyup', function() {
+  const searchTerm = this.value.toLowerCase();
+  const articles = [
+    { title: "Introduction", url: "https://www.example.com/article1" },
+    { title: "Overview", url: "https://www.example.com/article2" },
+    { title: "Supported Libraries", url: "https://www.example.com/article2" },
+    { title: "Features", url: "https://www.example.com/article2" },
+    { title: "Audience", url: "https://www.example.com/article2" },
+    { title: "Getting Started", url: "https://www.example.com/article2" },
+    { title: "Prerequisites", url: "https://www.example.com/article2" },
+    { title: "Site Navigation", url: "https://www.example.com/article2" },
+    { title: "Installation", url: "https://www.example.com/article2" },
+    { title: "Snippets", url: "https://www.example.com/article2" },
+    { title: "Introduction to Snippets", url: "https://www.example.com/article2" },
+    { title: "How to use Snippets", url: "https://www.example.com/article2" },
+    { title: "Snippets Examples", url: "https://www.example.com/article2" },
+    { title: "Templates", url: "https://www.example.com/article2" },
+    { title: "Templates Overview", url: "https://www.example.com/article2" },
+    { title: "How to apply templates", url: "https://www.example.com/article2" },
+    { title: "Template Gallery", url: "https://www.example.com/article2" },
+    { title: "Examples", url: "https://www.example.com/article2" },
+    { title: "Project Examples", url: "https://www.example.com/article2" },
+    { title: "Code Sanboxes", url: "https://www.example.com/article2" },
+    { title: "Tutorials", url: "https://www.example.com/article2" },
+    { title: "Beginner Tutorials", url: "https://www.example.com/article2" },
+    { title: "Advanced Tutorials", url: "https://www.example.com/article2" },
+    { title: "Reference", url: "https://www.example.com/article2" },
+    { title: "Components Library", url: "https://www.example.com/article2" },
+    { title: "Utilities", url: "https://www.example.com/article2" },
+    { title: "FAQ", url: "https://www.example.com/article2" },
+    { title: "Common Questions", url: "https://www.example.com/article2" },
+    { title: "Troubleshooting", url: "https://www.example.com/article2" },
+    { title: "Acknowledgements", url: "https://www.example.com/article2" },
+    { title: "Contributers", url: "https://www.example.com/article2" },
+    { title: "Special Thanks", url: "https://www.example.com/article2" },
+  ];
+  
+
+  let filteredArticles = articles.filter(article => article.title.toLowerCase().includes(searchTerm));
+
+  if (searchTerm.length > 0) {
+    results.innerHTML = '';
+
+    if (filteredArticles.length > 0) {
+      const list = document.createElement('ul');
+      results.appendChild(list);
+      results.style.display = 'block';
+
+      filteredArticles.forEach(article => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = article.url;
+        link.textContent = article.title;
+        listItem.appendChild(link);
+        list.appendChild(listItem);
+      });
+    } else {
+      results.textContent = 'No articles found.';
+      results.style.display = 'block';
+    }
+  } else {
+    results.style.display = 'none';
+  }
+});
+  </script>
   <link rel="stylesheet" href="https://os-org-in.github.io/DevSnippets/DOCS/CSS/style.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,7 +88,10 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLeft" aria-controls="offcanvasNavbarLeft" aria-label="Toggle navigation">
             <i class="fa-solid fa-compass"></i>
         </button>
-        <a class="navbar-brand" href="#"><b>Developer Snippets</b></a>
+        <form class="d-flex" role="search">
+        <input class="form-control me-2 py-1 px-0 pr-1 m-0" type="search" placeholder="Search Docs" id="search-box" aria-label="Search">
+       
+        </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarRight" aria-controls="offcanvasNavbarRight" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
