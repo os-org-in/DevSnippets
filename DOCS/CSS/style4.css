@@ -1,0 +1,56 @@
+#h1{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 70px;
+}
+
+.line{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.line2{
+  margin-top: 100px;
+}
+
+.p{
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 15px;
+}
+
+#tpe{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#proegs{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#intro{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#bpe{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#csbxs{
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  }
